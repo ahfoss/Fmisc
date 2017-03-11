@@ -11,9 +11,9 @@ makePmTable <- function(
 ) {
   mm <- matrix(
     paste(
-      format(round(means, meanRound)),
+      format(round(means, meanRound), nsmall = meanRound),
       '$\\pm$',
-      format(round(errs, errRound)),
+      format(round(errs, errRound), nsmall = errRound),
       sep = ''
     ),
     nrow = nrow(means),
